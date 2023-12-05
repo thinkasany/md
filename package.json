@@ -1,8 +1,9 @@
 {
-  "name": "md",
+  "name": "think-md",
   "version": "1.5.9",
   "private": false,
   "scripts": {
+    "release": "node ./bin/release.js",
     "prepare": "husky install",
     "lint": "vue-cli-service lint src",
     "start": "npm run lint -- --fix && run-p serve",
