@@ -30,14 +30,14 @@
         version: getNewVersion(packageJson.version, process.argv[2]),
       };
       fs.writeFileSync(
-        path.resolve(__dirname, '../package.json'),
+        path.resolve(__dirname, '../md-cli/package.json'),
         JSON.stringify(Object.assign({}, packageJson, newVersionObj), null, 2) +
           '\n'
       );
       console.log(newVersionObj);
     execCommand([
-        `git commit -a -m 'v${newVersionObj.version}'`,
-        `git tag v${newVersionObj.version}`,
+        `git commit -a -m 'cli-v${newVersionObj.version}'`,
+        `git tag cli-v${newVersionObj.version}`,
         'git push && git push --tags',
       ])
       console.log('\x1B[32m%s\x1B[0m', '发布完成，请关注github CI构建')
