@@ -1,6 +1,6 @@
 {
   "name": "md",
-  "version": "1.6.1",
+  "version": "0.0.6",
   "private": false,
   "scripts": {
     "release": "node ./bin/release.js",
