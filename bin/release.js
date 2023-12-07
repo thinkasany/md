@@ -36,7 +36,7 @@
       );
       console.log(newVersionObj);
     execCommand([
-        `git commit -a -m 'cli-v${newVersionObj.version}'`,
+        `git commit -a -m 'chore: update version cli-v${newVersionObj.version}'`,
         `git tag cli-v${newVersionObj.version}`,
         'git push && git push --tags',
       ])

@@ -1,7 +1,7 @@
 on:
   push:
     tags:
-      - "web-v*"
+      - "v*"
 
 name: Create Release
 
